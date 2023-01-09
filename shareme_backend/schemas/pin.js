@@ -2,7 +2,7 @@ export default {
   name: "pin",
   title: "Pin",
   type: "document",
-  field: [
+  fields: [
     {
       name: "title",
       title: "Title",
@@ -36,9 +36,26 @@ export default {
       },
     },
     {
-      name: "destination",
-      title: "Destination",
-      type: "url",
+      name: "userId",
+      title: "UserID",
+      type: "string",
+    },
+    {
+      name: "postedBy",
+      title: "PostedBy",
+      type: "postedBy",
+    },
+    {
+      name: "save",
+      title: "Save",
+      type: "array",
+      of: [{ type: "save" }],
+    },
+    {
+      name: "comment",
+      title: "Comment",
+      type: "array",
+      of: [{ type: "comment" }],
     },
   ],
 };
